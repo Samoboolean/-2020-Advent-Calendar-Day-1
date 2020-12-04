@@ -2,7 +2,7 @@
 
 namespace adventDay1
 {
-    class Program
+    class Day1
     {
         static void Main(string[] args)
         {
