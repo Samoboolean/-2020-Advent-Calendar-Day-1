@@ -74,14 +74,21 @@ namespace adventDay1
                 {
                     int num2 = intArray[j];
 
-                    int num3 = num1 + num2;
-
-                    if (num3 == 2020)
+                    for (int x = 0; x < fileLength; x++)
                     {
-                        Console.WriteLine("num1 pos: " + Convert.ToString(i));
-                        Console.WriteLine("num2 pos: " + Convert.ToString(j));
-                        string printAnswer = "The answer to sum is: " + Convert.ToString(num1) + "+" + Convert.ToString(num2) ;
-                        return printAnswer;
+                        int num3 = intArray[x];
+
+                        int answer = num1 + num2 + num3;
+
+                        if (answer == 2020)
+                        {
+                            Console.WriteLine("num1 pos: " + Convert.ToString(i));
+                            Console.WriteLine("num2 pos: " + Convert.ToString(j));
+                            Console.WriteLine("num3 pos: " + Convert.ToString(x));
+                            int multiply = num1 * num2 * num3;
+                            string printAnswer = "The answer to sum is: " + Convert.ToString(num1) + "+" + Convert.ToString(num2) + "+" + Convert.ToString(num3) + "\n" + "The answer to the question is: " + Convert.ToString(multiply);
+                            return printAnswer;
+                        }
                     }
                 }
             }
