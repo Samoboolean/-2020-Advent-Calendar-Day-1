@@ -1,26 +1,11 @@
 ﻿using System;
 
-namespace adventDay1
+namespace Advent2020
 {
     class Day1
     {
-        static void Main(string[] args)
-        {
-            string fileName = @"C:\Users\Sam\Downloads\input.txt";
 
-            // create a string[] and use the method to get a value
-             string[] lines = getFileText(fileName);
-
-            // printLinesText(lines);
-             int fileLength = getFileLength(fileName);
-
-            //printLinesInt(convertToIntArray(lines, fileLength));
-
-            Console.WriteLine(getAnswerSum(convertToIntArray(lines, fileLength), fileLength));
-
-        }
-
-        static string[] getFileText(string fileName)
+        public static string[] getFileText(string fileName)
         {
             string[] lines = System.IO.File.ReadAllLines(fileName);
 
@@ -42,14 +27,14 @@ namespace adventDay1
             return singleInt;
         }
 
-        static int getFileLength(string fileName)
+        public static int getFileLength(string fileName)
         {
             int fileLength = System.IO.File.ReadAllLines(fileName).Length;
 
             return fileLength;
         }
 
-        static int[] convertToIntArray(string[] normalArray, int arrayLength)
+        public static int[] convertToIntArray(string[] normalArray, int arrayLength)
         {
             int[] intArray = new int[arrayLength];
 
@@ -64,7 +49,7 @@ namespace adventDay1
 
 
 
-        static string getAnswerSum(int[] intArray, int fileLength)
+        public static string getAnswerSum(int[] intArray, int fileLength)
         {
             for (int i = 0; i < fileLength; i++)
             {
